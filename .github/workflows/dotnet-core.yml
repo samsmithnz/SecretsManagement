@@ -1,0 +1,14 @@
+name: Secrets test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Secret echo
+      run: echo ${ secrets.SamsPassword }
