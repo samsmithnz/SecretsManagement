@@ -11,4 +11,7 @@ jobs:
 
     steps:
     - name: Secret echo
-      run: echo ${ secrets.SamsPassword }
+      run: |
+        $variable = "${{ secrets.SamsPassword }}"
+        write-host "password raw: ${{ secrets.SamsPassword }}"
+        write-host "password processed: $variable"
