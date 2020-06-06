@@ -12,6 +12,4 @@ jobs:
     steps:
     - name: Secret echo
       run: |
-        $variable = "${{ secrets.SamsPassword }}"
-        write-host "password raw: ${{ secrets.SamsPassword }}"
-        write-host "password processed: $variable"
+        npm install -g tfx-cli
